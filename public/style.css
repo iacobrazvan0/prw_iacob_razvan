@@ -1,0 +1,28 @@
+.custom-table {
+    border-collapse: collapse; /* Unește granițele celulelor */
+    width: 100%; /* Face ca tabelul să se întindă pe întreaga lățime a containerului */
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid rgb(255, 0, 0); /* Adaugă o graniță de grosime 1px pentru celule */
+    padding: 8px; /* Adaugă un spațiu între conținutul celulelor și graniță */
+}
+
+.custom-table th {
+    background-color: #06daff; /* Adaugă un fundal gri pentru rândurile de antet */
+    text-align: left; /* Aliniază textul la stânga în celulele de antet */
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #0cff20; /* Adaugă un fundal gri deschis pentru rândurile pare */
+}
+
+/* Stiluri CSS pentru buton */
+.button button {
+    background-color: #00ff55;
+    color: white;
+    padding: 10px 20px;
+    border: 1;
+    border-radius: 5px;
+    cursor: pointer;
+}
