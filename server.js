@@ -1,3 +1,5 @@
+
+
 // Importăm modulul http pentru a crea serverul
 const http = require('http');
 const fs = require('fs'); // Modulul fs (file system) este folosit pentru a citi fișiere
