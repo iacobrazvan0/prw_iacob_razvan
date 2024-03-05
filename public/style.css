@@ -18,11 +18,125 @@
 }
 
 /* Stiluri CSS pentru buton */
-.button button {
-    background-color: #00ff55;
-    color: white;
+.buttonOrar {
+    /* culoare de fundal */
+    background-color: #3498db;
+    /* culoare text */
+    color: #ce2424;
+    /* dimensiuni padding */
     padding: 10px 20px;
-    border: 1;
-    border-radius: 5px;
+    /* grosime bordură */
+    border: 2px solid #3498db;
+    /* margin pentru distanțare */
+    margin: 5px;
+    /* rotunjire colțuri */
+    border-radius: 8px;
+    /* cursor de tip pointer */
     cursor: pointer;
+    /* font */
+    font-family: Arial, sans-serif;
+    /* text la centru */
+    text-align: center;
+    /* tranzitie pentru animatie la hover */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Stiluri pentru hover */
+.buttonOrar:hover {
+    /* schimbare culoare de fundal la hover */
+    background-color: #2980b9;
+    /* schimbare culoare text la hover */
+    color: #c51818;
+}
+
+
+/* Stilurile pentru tabel */
+.orarTable {
+    border-collapse: collapse; /* Unește granițele celulelor */
+    width: 100%; /* Face ca tabelul să se întindă pe întreaga lățime a containerului */
+}
+
+.orarTable th, .orarTable td {
+    border: 1px solid rgb(0, 0, 0); /* Adaugă o graniță de grosime 1px pentru celule */
+    padding: 8px; /* Adaugă un spațiu între conținutul celulelor și graniță */
+    text-align: center; /* Aliniază textul la centru în celule */
+}
+
+.orarTable th {
+    background-color: #06daff; /* Adaugă un fundal gri pentru rândurile de antet */
+}
+
+.orarTable tr:nth-child(even) {
+    background-color: #fdfdfd; /* Adaugă un fundal gri deschis pentru rândurile pare */
+}
+
+/* Stilurile pentru ore */
+.orarTable th:first-child, #orarTable td:first-child {
+    background-color: #0b527a; /* Adaugă un fundal gri pentru prima coloană */
+}
+
+/* Stilurile pentru zile */
+.orarTable tr:first-child th {
+    background-color: #06daff; /* Adaugă un fundal gri pentru prima linie de antet */
+}
+
+.buttonAfisareMaterii {
+    /* culoare de fundal */
+    background-color: #3498db;
+    /* culoare text */
+    color: #ce2424;
+    /* dimensiuni padding */
+    padding: 10px 20px;
+    /* grosime bordură */
+    border: 2px solid #3498db;
+    /* margin pentru distanțare */
+    margin: 5px;
+    /* rotunjire colțuri */
+    border-radius: 8px;
+    /* cursor de tip pointer */
+    cursor: pointer;
+    /* font */
+    font-family: Arial, sans-serif;
+    /* text la centru */
+    text-align: center;
+    /* tranzitie pentru animatie la hover */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Stiluri pentru hover */
+.buttonAfisareMaterii:hover {
+    /* schimbare culoare de fundal la hover */
+    background-color: #2980b9;
+    /* schimbare culoare text la hover */
+    color: #c51818;
+}
+
+/* Stilurile pentru tabel */
+.tabelAfisareMaterii {
+    border-collapse: collapse; /* Unește granițele celulelor */
+    width: 100%; /* Face ca tabelul să se întindă pe întreaga lățime a containerului */
+}
+
+.tabelAfisareMaterii th, .tabelAfisareMaterii td {
+    border: 1px solid rgb(0, 0, 0); /* Adaugă o graniță de grosime 1px pentru celule */
+    padding: 8px; /* Adaugă un spațiu între conținutul celulelor și graniță */
+    text-align: center; /* Aliniază textul la centru în celule */
+}
+
+.tabelAfisareMaterii th {
+    background-color: #06daff; /* Adaugă un fundal gri pentru rândurile de antet */
+}
+
+.tabelAfisareMaterii tr:nth-child(even) {
+    background-color: #fdfdfd; /* Adaugă un fundal gri deschis pentru rândurile pare */
+}
+
+/* Stilurile pentru ore */
+.tabelAfisareMaterii th:first-child, .tabelAfisareMaterii td:first-child {
+    background-color: #fafdff; /* Adaugă un fundal gri pentru prima coloană */
+}
+
+/* Stilurile pentru zile */
+.tabelAfisareMaterii tr:first-child th {
+    background-color: #06daff; /* Adaugă un fundal gri pentru prima linie de antet */
 }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Orar</h2>
+    <table id="orarTable">
+        <tr>
+            <th>Zi</th>
+            <th>8:00-10:00</th>
+            <th>10:00-12:00</th>
+            <th>12:00-14:00</th>
+            <th>14:00-16:00</th>
+            <th>16:00-18:00</th>
+            <th>18:00-20:00</th>
+        </tr>
+    </table>
+
+    <script>
+        const orar = [
+            {
+                zi: 'Luni',
+                ore: {
+                    '8:00-10:00': '             ',
+                    '10:00-12:00': '            ',
+                    '12:00-14:00': 'Paradigme de programare - L',
+                    '14:00-16:00': 'Proiectare cu microprocesoare - L',
+                    '16:00-18:00': 'Programare - WEB - L',
+                    '18:00-20:00': '        '
+                }
+            },
+            {
+                zi: 'Marti',
+                ore: {
+                    '8:00-10:00': 'Programare WEB - C',
+                    '10:00-12:00': 'Sisteme de prelucare grafica - C',
+                    '12:00-14:00': '',
+                    '14:00-16:00': '',
+                    '16:00-18:00': 'Sisteme de prelucrare grafica - L',
+                    '18:00-20:00': 'Prelucrarea imaginilor - L'
+                }
+            },
+            {
+                zi: 'Miercuri',
+                ore: {
+                    '8:00-10:00': 'Prelucrarea imaginilor - C',
+                    '10:00-12:00': 'Sisteme inteligente - C',
+                    '12:00-14:00': 'Managementul proiectelor software - C',
+                    '14:00-15:00': 'Consiliere',
+                    '16:00-18:00': 'Proiectare cu microprocesoare arhitectura sistemelor de calcul',
+                    '18:00-20:00': '        '
+                }
+            },
+            {
+                zi: 'Joi',
+                ore: {
+                    '8:00-10:00': 'Sisteme inteligente - L',
+                    '10:00-12:00': 'Managementul proiectelor software - L ',
+                    '10:00-12:00': 'Managementul proiectelor software - L ',
+                    '12:00-14:00': 'Paradigme de programare - C',
+                    '14:00-16:00': '',
+                    '16:00-18:00': '',
+                    '18:00-20:00': '        '
+                }
+            },
+            {
+                zi: 'Vineri',
+                ore: {
+                    '8:00-10:00': '             ',
+                    '10:00-12:00': '            ',
+                    '12:00-14:00': '',
+                    '14:00-16:00': '',
+                    '16:00-18:00': '',
+                    '18:00-20:00': '        '
+                }
+            },
+            // Alte zile și ore aici...
+        ];
+
+        function afiseazaOrar(orar) {
+            orar.forEach(zi => {
+                const row = document.createElement('tr');
+                const ziCell = document.createElement('td');
+                ziCell.textContent = zi.zi;
+                row.appendChild(ziCell);
+                
+                Object.entries(zi.ore).forEach(([ora, materie]) => {
+                    const oraCell = document.createElement('td');
+                    oraCell.textContent = `${materie}`; // Afișează ora și materia în celulă
+                    row.appendChild(oraCell);
+                });
+
+                document.getElementById('orarTable').appendChild(row);
+            });
+        }
+
+        afiseazaOrar(orar);
+    </script>
+</body>
+</html>
