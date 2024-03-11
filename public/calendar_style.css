@@ -1,0 +1,42 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+#calendar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.month {
+  margin: 20px;
+  border: 1px solid #e2d84f;
+  padding: 10px;
+  width: 30%;
+}
+
+.month h2 {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  padding: 5px;
+}
+
+th {
+  background-color: #ee5959;
+}
+
+td {
+  border: 1px solid #ddd;
+}
+
+.weekday-icon {
+  color: #d4b70f; /* Schimbă culoarea iconițelor pentru săptămâni */
+}
