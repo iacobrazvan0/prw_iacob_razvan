@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Table</title>
+    <style>
+        /* Stiluri CSS */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr.selected {
+            background-color: yellow;
+        }
+        .total-row {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="lista">
+        <p>Aici va fi tabelul</p>
+    </div>
+
+    <script>
+        // Definim numele cărților și prețurile corespunzătoare
+        const books = [
+            { title: "Harry Potter", price: 25.99 },
+            { title: "The Lord of the Rings", price: 29.99 },
+            { title: "To Kill a Mockingbird", price: 15.50 },
+            { title: "1984", price: 20.00 }
+        ];
+
+        // Variabilă pentru a stoca totalul
+        let total = 0;
+
+        // Funcție pentru construirea tabelului HTML
+        function buildTable() {
+            const listaDiv = document.getElementById('lista');
+            const table = document.createElement('table');
+
+            // Construim capul de tabel
+            const headerRow = table.insertRow();
+            headerRow.innerHTML = "<th>Nume carte</th><th>Preț</th><th>Opțiune</th>";
+
+            // Construim rândurile pentru fiecare carte
+            books.forEach((book, index) => {
+                const row = table.insertRow();
+                row.innerHTML = `<td>${book.title}</td><td>${book.price}</td><td><input type="checkbox" onclick="updateTotal(this, ${index})"></td>`;
+            });
+
+            // Adăugăm tabelul în div-ul lista
+            listaDiv.innerHTML = "";
+            listaDiv.appendChild(table);
+
+            // Adăugăm rândul pentru total
+            const totalRow = table.insertRow();
+            totalRow.className = 'total-row';
+            totalRow.id = 'total-row';
+            totalRow.innerHTML = `<td colspan="2">Total:</td><td>${total.toFixed(2)}</td>`;
+        }
+
+// Funcția pentru actualizarea totalului la selectarea/deselectarea unui checkbox
+function updateTotal(checkbox, index) {
+    const row = checkbox.parentNode.parentNode;
+    const price = books[index].price;
+    if (checkbox.checked) {
+        total += price;
+        row.classList.add('selected'); // Adăugăm clasa selected
+    } else {
+        total -= price;
+        row.classList.remove('selected'); // Eliminăm clasa selected
+    }
+    const totalCell = document.getElementById('total-row').cells[1]; // Indexul coloanei pentru total
+    totalCell.textContent = total.toFixed(2);
+}
+
+
+
+        // Apelăm funcția pentru a construi tabelul la încărcarea paginii
+        buildTable();
+    </script>
+</body>
+</html>

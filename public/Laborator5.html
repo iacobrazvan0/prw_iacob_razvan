@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titluri de cărți</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    li {
+        margin-bottom: 10px;
+    }
+    
+    li::before {
+        content: "• ";
+        font-weight: bold;
+        color: #007bff; /* culoare albastră */
+    }
+    .text-section {
+            padding: 20px;
+            border: 2px solid #000;
+            background-color: #f0f0f0; /* Culoare de fundal inițială */
+            transition: background-color 0.5s ease; /* Efect de tranziție pentru culoare */
+        }
+</style>
+<body>
+    <div class="container">
+        <h1>Titluri de cărți</h1>
+        <ul id="titluri-list"></ul>
+    </div>
+
+    <div class="text-section" id="text-section">
+        <p>Aceasta este o secțiune de text cu un fundal inițial.</p>
+    </div>
+    <script>
+        const titluriCarti = [
+    "Harry Potter și Piatra Filozofală",
+    "Cronicile din Narnia",
+    "Mândrie și Prejudecată",
+    "1984",
+    "Norwegian Wood"
+];
+
+const titluriList = document.getElementById('titluri-list');
+
+// Parcurgem array-ul și adăugăm fiecare titlu împreună cu numărul său de ordine în lista HTML
+titluriCarti.forEach((titlu, index) => {
+    const li = document.createElement('li');
+    li.textContent = `${index + 1}. ${titlu}`;
+    titluriList.appendChild(li);
+});
+
+function ArrayPlusDelay(array, delegate, delay) {
+    array.forEach(function(el, i) {
+        setTimeout(function() {
+            delegate(el);
+        }, i * delay);
+    });
+}
+
+ArrayPlusDelay(titluriCarti, function(titlu) {
+    console.log(titlu);
+}, 2000);
+
+ const textSection = document.getElementById('text-section');
+
+        function changeBackgroundColor() {
+            setInterval(function() {
+                const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16); // Generăm o culoare aleatoare
+                textSection.style.backgroundColor = randomColor; // Schimbăm culoarea de fundal
+            }, 5000);
+        }
+        changeBackgroundColor();
+    </script>
+</body>
+</html>

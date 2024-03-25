@@ -172,3 +172,64 @@
     /* schimbare culoare text la hover */
     color: #441cb4;
 }
+.buttonLaborator4 {
+    /* culoare de fundal */
+    background-color: #3498db;
+    /* culoare text */
+    color: #044469;
+    /* dimensiuni padding */
+    padding: 10px 20px;
+    /* grosime bordură */
+    border: 2px solid #3498db;
+    /* margin pentru distanțare */
+    margin: 5px;
+    /* rotunjire colțuri */
+    border-radius: 8px;
+    /* cursor de tip pointer */
+    cursor: pointer;
+    /* font */
+    font-family: Arial, sans-serif;
+    /* text la centru */
+    text-align: center;
+    /* tranzitie pentru animatie la hover */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Stiluri pentru hover */
+.buttonLaborator4:hover {
+    /* schimbare culoare de fundal la hover */
+    background-color: #d400ff;
+    /* schimbare culoare text la hover */
+    color: #441cb4;
+}
+
+.buttonLaborator5 {
+    /* culoare de fundal */
+    background-color: #3498db;
+    /* culoare text */
+    color: #044469;
+    /* dimensiuni padding */
+    padding: 10px 20px;
+    /* grosime bordură */
+    border: 2px solid #3498db;
+    /* margin pentru distanțare */
+    margin: 5px;
+    /* rotunjire colțuri */
+    border-radius: 8px;
+    /* cursor de tip pointer */
+    cursor: pointer;
+    /* font */
+    font-family: Arial, sans-serif;
+    /* text la centru */
+    text-align: center;
+    /* tranzitie pentru animatie la hover */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Stiluri pentru hover */
+.buttonLaborator5:hover {
+    /* schimbare culoare de fundal la hover */
+    background-color: #d400ff;
+    /* schimbare culoare text la hover */
+    color: #441cb4;
+}
